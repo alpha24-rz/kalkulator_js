@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="/style.css" rel="stylesheet">
+</head>
+
+<body class="relative w-full h-screen flex justify-center items-center m-0 overflow-hidden">
+    <!-- Gambar background full screen -->
+    <img src="/images/bg.jpg" alt="Background" class="absolute rotate-90 w-165 object-cover">
+
+    <!-- Konten card di tengah -->
+    <div class=" w-100 h-125 border border-white bg-black/30 backdrop-blur-sm rounded-2xl z-10">
+        <div class="flex flex-col w-full h-full justify-between">
+
+            <div class="flex flex-col w-full justify-center items-center p-2">
+                <h1 class="text-white text-2xl font-serif">Kalkulator</h1>
+                <h3 class="text-md font-thin text-white text-center">Ini hanya sebuah kalkulator sederhana, sebagai
+                    project pembelajaran Javascript saya</h3>
+            </div>
+
+            <div class="w-full h-20 px-15 justify-center">
+                <div id="boxHasil"
+                    class="flex w-full items-center p-2 font-sans text-2xl h-full bg-white box-inner rounded-xl">
+                </div>
+            </div>
+
+            <div class="w-full h-full p-2 justify-center items-center">
+                <div class="flex flex-col justify-center items-center p-2">
+                    <div class="flex gap-3 p-2">
+                        <button value="7"
+                            class="bg-white rounded-2xl text-black text-4xl font-sans font-medium w-15 h-15 button-angka">7</button>
+                        <button value="8"
+                            class="bg-white rounded-2xl text-black text-4xl font-sans font-medium w-15 h-15 button-angka">8</button>
+                        <button value="9"
+                            class="bg-white rounded-2xl text-black text-4xl font-sans font-medium w-15 h-15 button-angka">9</button>
+                        <button
+                            class="bg-[#262626] flex justify-center items-center rounded-2xl text-black text-4xl font-sans font-medium w-15 h-15">
+                            <svg viewBox="0 0 24 24" id="_24x24_On_Light_Plus" data-name="24x24/On Light/Plus"
+                                xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <rect id="view-box" width="24" height="24" fill="#f7f7f7" opacity="0"></rect>
+                                    <path id="Shape"
+                                        d="M5,10.75V6.5H.75A.75.75,0,0,1,.75,5H5V.75a.75.75,0,0,1,1.5,0V5h4.25a.75.75,0,1,1,0,1.5H6.5v4.25a.75.75,0,1,1-1.5,0Z"
+                                        transform="translate(6 6)" fill="#f7f7f7"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="flex gap-3 p-2">
+                        <button value="4"
+                            class="bg-white rounded-2xl text-black text-4xl font-sans font-medium w-15 h-15 button-angka">4</button>
+                        <button value="5"
+                            class="bg-white rounded-2xl text-black text-4xl font-sans font-medium w-15 h-15 button-angka">5</button>
+                        <button value="6"
+                            class="bg-white rounded-2xl text-black text-4xl font-sans font-medium w-15 h-15 button-angka">6</button>
+                        <button class="bg-[#262626] rounded-2xl text-black text-4xl font-sans font-medium w-15 h-15">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path d="M6 12L18 12" stroke="#f7f7f7" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </svg></button>
+                    </div>
+
+                    <div class="flex gap-3 p-2">
+                        <button value="1"
+                            class="bg-white rounded-2xl text-black text-4xl font-sans font-medium w-15 h-15 button-angka">1</button>
+                        <button value="2"
+                            class="bg-white rounded-2xl text-black text-4xl font-sans font-medium w-15 h-15 button-angka">2</button>
+                        <button value="3"
+                            class="bg-white rounded-2xl text-black text-4xl font-sans font-medium w-15 h-15 button-angka">3</button>
+                        <button class="bg-[#262626] rounded-2xl text-4xl font-sans font-medium w-15 h-15">
+                            <svg viewBox="0 0 24 24" id="_24x24_On_Light_Cross" data-name="24x24/On Light/Cross"
+                                xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <rect id="view-box" width="24" height="24" fill="none"></rect>
+                                    <path id="Shape"
+                                        d="M9.291,10.352l-4-4-4.005,4A.75.75,0,1,1,.22,9.291l4.005-4L.22,1.281A.75.75,0,0,1,1.281.22L5.286,4.225l4-4.005a.75.75,0,1,1,1.061,1.061l-4,4.005,4,4a.75.75,0,0,1-1.061,1.061Z"
+                                        transform="translate(6.629 6.8)" fill="#f7f7f7"></path>
+                                </g>
+                            </svg></button>
+                    </div>
+
+                    <div  class="flex gap-3 p-2">
+                        <button id="clear" class="bg-[#CF0F0F] justify-center flex items-center rounded-2xl w-15 h-15"><span
+                                class=" text-white text-4xl font-sans font-medium">C</span></button>
+                        <button
+                            class="bg-white rounded-2xl text-black text-4xl font-sans font-medium w-15 h-15">0</button>
+                        <button
+                            class="bg-[#262626] flex justify-center items-center rounded-2xl text-black text-4xl font-sans font-medium w-15 h-15">
+                            <img src="/icons/equal.svg" alt="" class="w-10 h-auto">
+                        </button>
+                        <button
+                            class="bg-[#262626] flex justify-center items-center rounded-2xl text-white text-4xl font-sans font-medium w-15 h-15">
+                            <img src="/icons/division.svg" alt="" class="w-10 h-auto"></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="/sricpt.js"></script>
+</body>
+
+</html>
